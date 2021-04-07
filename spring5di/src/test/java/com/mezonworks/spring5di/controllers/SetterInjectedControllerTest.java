@@ -1,10 +1,8 @@
 package com.mezonworks.spring5di.controllers;
 
-import com.mezonworks.spring5di.services.GreetingServiceImpl;
+import com.mezonworks.spring5di.services.ConstructorInjectedGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectedControllerTest {
 
@@ -13,7 +11,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorInjectedGreetingServiceImpl());
     }
 
     @Test
