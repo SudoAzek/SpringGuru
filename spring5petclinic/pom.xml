@@ -21,9 +21,6 @@
     <properties>
         <java.version>11</java.version>
     </properties>
-    <dependencies>
-
-    </dependencies>
 
     <build>
         <pluginManagement>
@@ -40,8 +37,19 @@
                         </excludes>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <goals>
+                        <goal>install</goal>
+                    </goals>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:SudoAzek/SpringGuru.git</developerConnection>
+    </scm>
 
 </project>
