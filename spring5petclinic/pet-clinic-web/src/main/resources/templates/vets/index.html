@@ -5,6 +5,24 @@
     <title>List of Vets</title>
 </head>
 <body>
+<!--/*@thymesVar id="vet" type="com.mezonworks.spring5petclinic.model.Vet"*/-->
 <h1 th:text="'List of Vets'">List of Vets...</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>LastName</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vet : ${vets}">
+            <th th:text="${vet.id}">1</th>
+            <th th:text="${vet.firstName}">Joe</th>
+            <th th:text="${vet.lastName}">Buck</th>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
