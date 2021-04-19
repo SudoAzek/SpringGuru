@@ -4,9 +4,11 @@ import com.mezonworks.spring5petclinic.model.Owner;
 import com.mezonworks.spring5petclinic.model.Vet;
 import com.mezonworks.spring5petclinic.services.CrudService;
 import com.mezonworks.spring5petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override

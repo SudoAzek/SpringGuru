@@ -3,9 +3,11 @@ package com.mezonworks.spring5petclinic.services.map;
 import com.mezonworks.spring5petclinic.model.Owner;
 import com.mezonworks.spring5petclinic.services.CrudService;
 import com.mezonworks.spring5petclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
