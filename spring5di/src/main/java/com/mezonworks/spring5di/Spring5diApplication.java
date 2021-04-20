@@ -1,5 +1,6 @@
 package com.mezonworks.spring5di;
 
+import com.mezonworks.spring5di.config.DiConfiguration;
 import com.mezonworks.spring5di.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -34,6 +35,12 @@ public class Spring5diApplication {
         System.out.println("-------- Profile check");
         I18nController i18nController = (I18nController) context.getBean("i18nController");
         System.out.println(i18nController.sayHello());
+
+        System.out.println("-------- Config Props Bean");
+        DiConfiguration diConfiguration = context.getBean(DiConfiguration.class);
+        System.out.println(diConfiguration.getUsername());
+        System.out.println(diConfiguration.getPassword());
+        System.out.println(diConfiguration.getJdbcUrl());
     }
 
 }

@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dog, EN, qa
+
+mezon:
+  username: YmlUserName
+  password: YmlPassword
+  jdbcUrl: YmlUrl
+
+---
+spring:
+  profiles: prod
+mezon:
+  username: YmlProdUserName
+  password: YmlProdPassword
+  jdbcUrl: YmlProdUrl
